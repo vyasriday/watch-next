@@ -1,17 +1,29 @@
 <template>
   <div id="app">
+    <Header :title='title' />
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ul>
+      <li v-for="(item, index) in list" :key="index">{{item}}</li>  
+    </ul>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue';
+import HelloWorld from './components/HelloWorld.vue';
 
 export default {
   name: 'app',
+  data() {
+    return {
+      title: "Vue Movie DB",
+      list: [ "Penguin", "Turtle", "Red Panda"]
+    }
+  },
   components: {
-    HelloWorld
+    HelloWorld,
+    Header
   }
 }
 </script>
