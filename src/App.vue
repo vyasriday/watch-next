@@ -29,8 +29,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
  .fade-enter-active, .fade-enter-leave {
         transition: all 0.3s ease-in;

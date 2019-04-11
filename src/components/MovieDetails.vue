@@ -1,3 +1,4 @@
+<!--
 <template>
   <div class="movie-wrapper" :style="styles">
     <div class="movie-info">

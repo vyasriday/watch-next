@@ -1,10 +1,6 @@
 <template>
     <header>
-        <h1><router-link to="/">{{title}}</router-link></h1>
-        <transition name="fade">
-            <h3 v-if="show">Animated</h3>
-        </transition>
-        <button @click="show = !show">Show/Hide</button>
+        
     </header>
 </template>
 
