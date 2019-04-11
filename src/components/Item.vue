@@ -1,14 +1,14 @@
 <template>
-  <div style="position:relative">
+  <div id="item-wrapper">
     <router-link :to="itemUrl" >
     <img :src="imageUrl" />
-    </router-link>
     <div class="description">
     <p class="title">{{category === 'movie'? data.title: data.name }}</p>
     <p v-if="category=='movie'"> Releae Date: {{data.release_date}}</p>
     <p v-else>First Air Date: {{data.first_air_date}}</p>
     <p> IMDB Rating: {{data.vote_average}}</p>
     </div>
+    </router-link>
   </div>
 </template>
 
@@ -24,9 +24,6 @@
       },
       itemUrl(){
         return `/${this.category}/${this.data.id}`;
-      },
-      truncatedOverview() {
-        return this.data.overview.substring(0, 150);
       }
     }
   }
@@ -34,21 +31,23 @@
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Dokdo');
-  div {
+  #item-wrapper {
+    position: relative;
     margin: 0 15px;
     transition: all 500ms ease-in 100ms;
     padding: 2rem 0;
   }
 
-  div:hover {
+  #item-wrapper:hover {
     transform: scale(1.1);
   }
 
-  div:hover > .description {
-    top: calc(300px - 170px);
+  #item-wrapper:hover > a > .description {
+    top: calc(300px - 150px);
     z-index: 0;
     height: 150px;
     transform: unset;
+    padding: 2rem 0;
   }
   .description {
     font-family: 'Dokdo', cursive;
@@ -65,6 +64,9 @@
     opacity: 0.9;
     transition: all .5s ease-out 400ms;
     cursor: pointer;
+    color: #9e9eb3;
+    font-size: 20px;
+    text-align: center;
   }
 
   a {
@@ -75,13 +77,7 @@
     height: 300px;
 
   }
-  .description {
-    z-index: -1;
-    position: absolute;
-    color: #9e9eb3;
-    font-size: 20px;
-    text-align: center;
-  }
+
   .description > p {
     margin: 4px auto;
   }
