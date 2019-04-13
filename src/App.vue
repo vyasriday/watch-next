@@ -4,11 +4,13 @@
     <transition name="fade">
       <router-view />
     </transition>
+    <Footer />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import './assets/styles.css';
 
 export default {
@@ -19,7 +21,8 @@ export default {
     }
   },
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
@@ -31,7 +34,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 }
  .fade-enter-active, .fade-enter-leave {
-        transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
   }
   .fade-enter, .fade-leave-to {
       opacity: 0;

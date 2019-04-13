@@ -1,4 +1,4 @@
-# movie-project
+# watch next
 
 ## Project setup
 ```

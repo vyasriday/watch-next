@@ -38,12 +38,8 @@
     padding: 2rem 0;
   }
 
-  #item-wrapper:hover {
-    transform: scale(1.1);
-  }
-
   #item-wrapper:hover > a > .description {
-    top: calc(300px - 150px);
+    top: 125px;
     z-index: 0;
     height: 150px;
     transform: unset;

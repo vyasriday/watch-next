@@ -1,4 +1,3 @@
-<!--
 <template>
   <div class="movie-wrapper" :style="styles">
     <div class="movie-info">
@@ -16,20 +15,21 @@
     data() {
       return {
         movieId: '',
+        category: '',
         movieDetails: {}
       }
     },
     created() {
       this.movieId = this.$route.params.id;
+      this.category = this.$route.params.category;
       this.fetchMovieDetails();
     },
     methods: {
       async fetchMovieDetails() {
         try {
-          const res = await fetch(`https://api.themoviedb.org/3/movie/${this.movieId}?api_key=4e062be51f8b55a66259160103b5f870`);          
+          const res = await fetch(`https://api.themoviedb.org/3/${this.category}/${this.movieId}?api_key=4e062be51f8b55a66259160103b5f870`);          
           const movieDetails = await res.json();
           this.movieDetails = movieDetails;
-          console.log(this.movieDetails);
         } catch (e) {
           
         } 
