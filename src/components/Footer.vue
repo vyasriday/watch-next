@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <p>&copy; Hridayesh Sharma 2019 - India </p> -->
+    <p>&copy; Hridayesh Sharma 2019 - India </p>
   </div>
 </template>
 
@@ -12,7 +12,7 @@
 
 <style scoped>
   div {
-    background: white;
+    /* background: white; */
     margin-top: 20px;
   }
   p {

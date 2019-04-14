@@ -14,20 +14,20 @@
     name: 'MovieDetails',
     data() {
       return {
-        movieId: '',
+        id: '',
         category: '',
         movieDetails: {}
       }
     },
     created() {
-      this.movieId = this.$route.params.id;
+      this.id = this.$route.params.id;
       this.category = this.$route.params.category;
       this.fetchMovieDetails();
     },
     methods: {
       async fetchMovieDetails() {
         try {
-          const res = await fetch(`https://api.themoviedb.org/3/${this.category}/${this.movieId}?api_key=4e062be51f8b55a66259160103b5f870`);          
+          const res = await fetch(`https://api.themoviedb.org/3/${this.category}/${this.id}?api_key=4e062be51f8b55a66259160103b5f870`);          
           const movieDetails = await res.json();
           this.movieDetails = movieDetails;
         } catch (e) {

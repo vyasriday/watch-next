@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <Header :title='title' />
+    <Header />
+    <div style="min-height: 80vh">
     <transition name="fade">
       <router-view />
     </transition>
+    </div>
     <Footer />
   </div>
 </template>
@@ -15,11 +17,6 @@ import './assets/styles.css';
 
 export default {
   name: 'app',
-  data() {
-    return {
-      title: "Vue Movie DB"
-    }
-  },
   components: {
     Header,
     Footer
@@ -40,4 +37,5 @@ export default {
       opacity: 0;
       transform: translateX(100%);
   }
+  
 </style>

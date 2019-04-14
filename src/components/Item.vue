@@ -13,6 +13,7 @@
 </template>
 
 <script>
+// import {imageUrl, imagePath} from '../helper/helper.js';
   const POSTER_PATH = 'https://image.tmdb.org/t/p/w300';
   export default {
     name: "Item",
@@ -55,18 +56,18 @@
     height: 0px;
     position: absolute;
     width: 250px;
-    background:linear-gradient(90deg, rgb(1, 4, 14) 0%, rgba(0, 58, 117, 0.9948354341736695) 100%);
+    background:#222;
     margin-left: 0;
-    opacity: 0.9;
+    opacity: 0.88;
     transition: all .5s ease-out 400ms;
     cursor: pointer;
-    color: #9e9eb3;
+    color: #fff;
     font-size: 20px;
     text-align: center;
   }
 
   a {
-    box-shadow: 2px 4px 9px;
+    box-shadow: 2px 1px 4px darkgrey;
   }
   img {
     width: 250px;

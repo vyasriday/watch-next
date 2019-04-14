@@ -1,10 +1,11 @@
 <template>
   <div>
-    <input @input="displayDropdown" @blur="hideDropdown" type="text" v-model="searchQuery" required maxlength="80" placeholder="    Search For Movies and Tv Shows"/> 
-    <span @click="goToSearchResults('all')" title="All of What Next" class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+    <input @keyup.enter="goToSearchResults('multi')" @input="displayDropdown"  type="text" v-model="searchQuery" required maxlength="80" placeholder="    Search For Movies and Tv Shows"/> 
+    <span @click="goToSearchResults('multi')" title="All of What Next" class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
       <ul>
         <li @click="goToSearchResults('tv')"><span class="queryText">{{searchQuery}}</span> in TV Shows</li>
-        <li @click="goToSearchResults('movies')"><span class="queryText">{{searchQuery}}</span> in Movies</li>
+        <li @click="goToSearchResults('movie')"><span class="queryText">{{searchQuery}}</span> in Movies</li>
+          
       </ul>
   </div>
 </template>
@@ -115,7 +116,7 @@
       margin-left: 10px;
       justify-content: flex-start;
     }
-    input, a > li {
+    input, ul {
       width: 90%;
     }
     .search-icon {
