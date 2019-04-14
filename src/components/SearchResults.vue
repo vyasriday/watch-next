@@ -44,7 +44,6 @@ const POSTER_PATH = 'https://image.tmdb.org/t/p/w300';
         const res = await fetch(URL);
         const result = await res.json();
         this.results = result.results;
-        console.log(this.results);
         this.loading = false;
       },
       //  imageUrl to generate path for each poster image
