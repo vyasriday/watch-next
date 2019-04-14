@@ -2,7 +2,7 @@
   <div class="movie-wrapper" :style="styles">
     <div class="movie-info">
       <h1>{{movieDetails.title}}</h1>
-      <h3>Release Date: {{movieDetails.release_date}}</h3>
+      <!-- <h3>Release Date: {{movieDetails.release_date}}</h3> -->
       <p>{{movieDetails.overview}}</p>
     </div>
   </div>
@@ -30,9 +30,9 @@
           const res = await fetch(`https://api.themoviedb.org/3/${this.category}/${this.id}?api_key=4e062be51f8b55a66259160103b5f870`);          
           const movieDetails = await res.json();
           this.movieDetails = movieDetails;
-        } catch (e) {
-          
-        } 
+        } catch(e) {
+          throw new Error(e);
+        }
       }
     },
     computed: {
@@ -52,8 +52,8 @@
     background-size: cover !important;
   }
   .movie-info {
-    background: white;
-    color: #222;
+    /* background: white; */
+    color: #fdfdfd;
     padding: 2rem 10%;
   }
 </style>

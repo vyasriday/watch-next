@@ -7,7 +7,7 @@
   </div>
   <div v-else>
     <div class="results-wrapper">
-      <router-link :to="itemUrl(result.id)" class="result-item" v-for="result in results" :key="result.id">
+      <router-link :to="category == 'multi'? `/${result.media_type}/${result.id}`: itemUrl(result.id)" class="result-item" v-for="result in results" :key="result.id">
         <div class="image-wrapper">
           <img :src="imageUrl(result.poster_path)" :alt="result.title">
         </div>

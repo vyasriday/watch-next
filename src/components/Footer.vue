@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <footer>
     <p>&copy; Hridayesh Sharma 2019 - India </p>
-  </div>
+  </footer>
 </template>
 
 <script>
@@ -11,12 +11,14 @@
 </script>
 
 <style scoped>
-  div {
-    /* background: white; */
-    margin-top: 20px;
+  footer {
+    position: relative;
   }
   p {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
+    position: absolute;
+    left: calc(100vw - 50%);
+    /* top: 50px; */
   }
 </style>
