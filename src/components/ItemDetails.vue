@@ -1,7 +1,7 @@
 <template>
   <div class="movie-wrapper" :style="styles">
     <div class="movie-info">
-      <h1>{{movieDetails.title}}</h1>
+      <h1>{{movieDetails.title ? movieDetails.title: movieDetails.name }}</h1>
       <!-- <h3>Release Date: {{movieDetails.release_date}}</h3> -->
       <p>{{movieDetails.overview}}</p>
     </div>
