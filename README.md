@@ -1,29 +1,5 @@
 # watch next
 
-## Project setup
-```
-npm install
-```
+### watch next is vue app that uses TMDB API. The project is part of my vue learning process and implements all basic features of vue.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The project is deployed at netlify and is live at [https://watch-next.netlify.com/](https://watch-next.netlify.com/).
