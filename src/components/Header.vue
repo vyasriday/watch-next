@@ -1,7 +1,7 @@
 <template>
     <header>
         <router-link to="/">
-            <h3> What Next ??</h3>
+            <img src="../assets/images/logo.png" />
         </router-link>
     </header>
 </template>
@@ -14,10 +14,7 @@
 
 <style scoped>
     header {
-        background: rgb(104, 103, 105);
-        color: white;
-        padding: 10px;
-        box-shadow: 1px 1px 3px;
+       box-shadow: 2px 2px 2px darkgrey
     }
     h3 {
         margin: 0;
@@ -29,11 +26,22 @@
         text-decoration: none;
         color: unset;
     }
+    a img {
+        width: 25%;
+        padding: 8px 6px;
+    }
     .fade-enter-active, .fade-enter-leave {
         transition: all 0.3s ease-in;
     }
     .fade-enter, .fade-leave-to {
         opacity: 0;
         transform: scale(0);
+    }
+
+    @media(max-width: 600px) {
+        a img {
+            width: 40%;
+            
+        }
     }
 </style>
