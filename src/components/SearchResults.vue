@@ -15,7 +15,7 @@
           <h4>{{result.original_title ? result.original_title:result.original_name}}</h4>
           <p v-if="result.release_date">{{result.release_date.substring(0,4)}}</p>
           <p v-if="result.first_air_date">{{result.first_air_date.substring(0,4)}}</p>
-            IMDB: <span class="rating">{{result.vote_average}}</span>
+          <p>IMDB: <span class="rating">{{result.vote_average}}</span></p> 
           <p class="overview">{{result.overview? result.overview: ''}}</p>
         </div>
       </router-link>
@@ -74,8 +74,11 @@ const POSTER_PATH = 'https://image.tmdb.org/t/p/w300';
     color: unset;
     display: flex;
     padding: 2% 4%;
-    margin: 20px 10px;
+    margin: 20px auto;
     box-shadow: 1px 4px 11px;
+    border-radius: 6px;
+    background: #f0f8ffd6;
+    width: 84%;
    
   }
   .image-wrapper {
@@ -90,6 +93,7 @@ const POSTER_PATH = 'https://image.tmdb.org/t/p/w300';
   img {
     width: 100%;
     height: 100%;
+    box-shadow: 2px 2px 2px;
 
   }
 
@@ -109,6 +113,12 @@ const POSTER_PATH = 'https://image.tmdb.org/t/p/w300';
   align-items: center;
 }
 
+.item-info > * {
+  padding: 4px 8px;
+  letter-spacing: 1px;
+  line-height: 1.1;
+
+}  
 .loader i {
   animation: animate 700ms ease-in infinite;
   font-size: 56px;
@@ -128,5 +138,21 @@ const POSTER_PATH = 'https://image.tmdb.org/t/p/w300';
     font-sizr: 28px;
   }
 }
+ 
+ @media(max-width: 460px) {
+   a {
+     flex-direction: column;
     
+   } 
+   a .image-wrapper {
+     max-width: 100%;
+     width: 100%;
+     margin-right: 0;
+   }
+
+   .item-info {
+     width: unset;
+   }
+ }
+
 </style>
